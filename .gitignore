@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv
+venv/
+env/
+.env
+
+# Plotting and Output (keeps repo clean)
+*.pdf
+*.png
+*.eps
+*.svg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints
