@@ -116,7 +116,7 @@ a2.annotate(f'min at $y\\approx{ym:.2f}$', xy=(ym+0.05, min(F2)*1.5), fontsize=9
 a2.set_xlabel(r'$y = \beta\phi$'); a2.set_ylabel(r'$F(y)$')
 a2.set_title('(b) Structure function', fontsize=12)
 a2.set_xlim(0.08, 1.52)
-fig.tight_layout(w_pad=3); fig.savefig('/home/claude/fig1_potential_structure.pdf'); plt.close()
+fig.tight_layout(w_pad=3); fig.savefig('fig1_potential_structure.pdf'); plt.close()
 
 # ═══════════════════════════════════════════════════════════════════
 # FIGURE 2: c_s^2 and f_NL vs u
@@ -139,7 +139,7 @@ a2.axhline(-565./81., color='b', ls=':', alpha=0.3); a2.axhline(25./9., color='r
 a2.axhline(0, color='k', alpha=0.15)
 a2.set_xlabel(r'$u$'); a2.set_ylabel(r'$f_{\rm NL}$'); a2.set_title('(b) Non-Gaussianity', fontsize=12)
 a2.set_ylim(-10, 5); a2.legend(fontsize=11, loc='right')
-fig.tight_layout(w_pad=3); fig.savefig('/home/claude/fig2_cs_fNL.pdf'); plt.close()
+fig.tight_layout(w_pad=3); fig.savefig('fig2_cs_fNL.pdf'); plt.close()
 
 # ═══════════════════════════════════════════════════════════════════
 # FIGURE 3: Master equation u(y) for various C
@@ -156,7 +156,7 @@ for C,l,c in zip(Cv,labs,cols):
 ax.set_xlabel(r'$y$'); ax.set_ylabel(r'$u(y)$')
 ax.set_title(r'Master equation: $u(1+2u)^2=\mathcal{C}\,F(y)$', fontsize=13)
 ax.legend(ncol=2, fontsize=10); ax.set_xlim(0.06,1.5); ax.set_ylim(1e-2,1e5)
-fig.tight_layout(); fig.savefig('/home/claude/fig3_master_equation.pdf'); plt.close()
+fig.tight_layout(); fig.savefig('fig3_master_equation.pdf'); plt.close()
 
 # ═══════════════════════════════════════════════════════════════════
 # FIGURE 4: (n_s, r) plane
@@ -219,7 +219,7 @@ ax.set_xlabel(r'$n_s$'); ax.set_ylabel(r'$r$')
 ax.set_xlim(0.935, 1.00); ax.set_ylim(0, 0.10)
 ax.set_title(r'Model predictions in the $(n_s,\,r)$ plane', fontsize=13)
 ax.legend(loc='upper left', fontsize=10)
-fig.tight_layout(); fig.savefig('/home/claude/fig4_ns_r.pdf'); plt.close()
+fig.tight_layout(); fig.savefig('fig4_ns_r.pdf'); plt.close()
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -285,7 +285,7 @@ axes[1,1].set_title('(d) Slow-roll parameter', fontsize=12)
 for ax in axes.flat: ax.set_xlim(0, min(Nmax*1.05, 120))
 fig.suptitle(rf'Inflationary trajectory ($\mathcal{{C}}={C_ex}$, $M_{{\rm Pl}}^2\beta^2={Mpb2_ex}$)',
              fontsize=14, y=1.01)
-fig.tight_layout(); fig.savefig('/home/claude/fig5_trajectory.pdf'); plt.close()
+fig.tight_layout(); fig.savefig('fig5_trajectory.pdf'); plt.close()
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -319,4 +319,4 @@ for uu_test in [0.1, 0.5, 1.0, 5.0, 10.0]:
         ratio = 2.0 / (4*np.pi * 1.0 * eps_test * P_R**0.5) / ((1+2*uu_test)*(1+6*uu_test))**0.25
         print(f"  u={uu_test:5.1f}, eps={eps_test:.3f}: Lambda_sc/H ~ {ratio:.2e}")
 
-print("\nDone. Figures in /home/claude/fig*.pdf")
+print("\nDone. Figures saved in current directory.")
